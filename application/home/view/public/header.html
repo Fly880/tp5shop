@@ -1,0 +1,25 @@
+<div class="topnav">
+		<div class="topnav_bd w1210 bc">
+			<div class="topnav_left">
+				
+			</div>
+			<div class="topnav_right fr">
+				<ul>
+					<li>您好，欢迎来到京西！
+				{if(session('member_id'))}
+					[<a href="{:url('/home/public/login')}" style="color: red">                         {:session('member_username')}</a> ] 
+					[<a href="{:url('/home/public/logout')}"> 退出 </a>]
+                      {else}
+					[<a href="{:url('/home/public/login')}"> 登录 </a>]
+					[<a href="{:url('/home/public/register')}">免费注册</a>] 
+					</li>
+				{/if}
+					<li class="line">|</li>
+					<li><a href="{:url('/home/order/selfOrder')}">我的订单</a></li>
+					<li class="line">|</li>
+					<li>客户服务</li>
+
+				</ul>
+			</div>
+		</div>
+</div>
